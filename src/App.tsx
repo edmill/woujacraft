@@ -1,5 +1,5 @@
 import React from 'react';
-import { SpriteStabilizer } from './Component';
+import { Woujacraft } from './Component';
 
 export default function App() {
   return (
@@ -53,7 +53,7 @@ export default function App() {
         }
       `}</style>
       <div className="flex-1 flex flex-col">
-        <SpriteStabilizer />
+        <Woujacraft />
       </div>
     </div>
   );

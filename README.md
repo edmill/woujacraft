@@ -1,4 +1,4 @@
-# Sprite Forge Studio
+# Woujacraft
 
 A professional-grade tool for stabilizing AI animation workflows. This component helps users extract frames from video footage, select a perfect looping window, and identify a "Seed Frame" to ground generative AI models.
 
@@ -13,10 +13,10 @@ A professional-grade tool for stabilizing AI animation workflows. This component
 ## Usage
 
 ```tsx
-import { SpriteStabilizer } from '@/sd-components/4e50f23e-0241-48f9-848f-414c0119e70a';
+import { Woujacraft } from '@/sd-components/4e50f23e-0241-48f9-848f-414c0119e70a';
 
 function App() {
-  return <SpriteStabilizer />;
+  return <Woujacraft />;
 }
 ```
 

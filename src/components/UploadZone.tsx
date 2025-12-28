@@ -1,5 +1,5 @@
 /**
- * Upload Zone Component - Woujasnap Edition
+ * Upload Zone Component - Woujacraft Edition
  * Handles drag and drop for MP4 files with a polished, delightful UI
  */
 import React, { useState, useRef } from 'react';

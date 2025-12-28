@@ -1,5 +1,5 @@
 /**
- * Woujasnap Main Component
+ * Woujacraft Main Component
  * Fully responsive, linear progressive web app
  * Layout: Sheet View (Left) | Tools & Preview (Right)
  */
@@ -17,7 +17,7 @@ import { generateSpriteSheet, generateGif, generateWebM, downloadBlob } from './
 import { cn } from './utils/cn';
 import { Camera, Sparkles, ChevronRight, Zap, LayoutGrid, Sliders, Moon, Sun, GripHorizontal } from 'lucide-react';
 
-export function SpriteStabilizer() {
+export function Woujacraft() {
   // Theme State
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 
@@ -271,7 +271,7 @@ export function SpriteStabilizer() {
                     <div className="w-8 h-8 bg-white dark:bg-white/10 rounded-lg flex items-center justify-center border border-slate-200 dark:border-white/10 shadow-sm backdrop-blur-md">
                         <Camera className="w-4 h-4 text-purple-600 dark:text-purple-400" />
                     </div>
-                    <span className="text-lg font-medium tracking-tight text-slate-900 dark:text-white/90">Woujasnap</span>
+                    <span className="text-lg font-medium tracking-tight text-slate-900 dark:text-white/90">Woujacraft</span>
                 </div>
                 
                 <div className="flex items-center gap-4">
@@ -338,7 +338,7 @@ export function SpriteStabilizer() {
                     <div className="w-8 h-8 bg-purple-100 dark:bg-purple-600/20 rounded-lg flex items-center justify-center border border-purple-200 dark:border-purple-500/20 group-hover:bg-purple-200 dark:group-hover:bg-purple-600/30 transition-colors">
                         <Camera className="w-4 h-4 text-purple-600 dark:text-purple-400" />
                     </div>
-                    <span className="font-display font-medium text-sm hidden sm:inline text-slate-900 dark:text-white/90">Woujasnap</span>
+                    <span className="font-display font-medium text-sm hidden sm:inline text-slate-900 dark:text-white/90">Woujacraft</span>
                 </div>
                 
                 <div className="flex items-center gap-4">

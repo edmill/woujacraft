@@ -1,6 +1,6 @@
 {
-  "name": "sprite-stabilizer",
-  "description": "Video frame extraction and sprite sheet generation tool",
+  "name": "woujacraft",
+  "description": "Woujacraft - Video frame extraction and sprite sheet generation tool",
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
