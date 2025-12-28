@@ -84,15 +84,15 @@ export function FrameTimeline({
 
                 {/* Overlay: Range Selector Box */}
                 <div 
-                    className="absolute top-0 bottom-0 border-2 border-purple-500 dark:border-white z-20 bg-white/10 backdrop-brightness-150"
+                    className="absolute top-0 bottom-0 border-2 border-cyan-500 dark:border-white z-20 bg-white/10 backdrop-brightness-150"
                     style={{
                         left: `${selectorLeft}%`,
                         width: `${selectorWidth}%`
                     }}
                 >
                      {/* Handles */}
-                     <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-6 bg-purple-500 dark:bg-white rounded-full shadow-sm" />
-                     <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-1.5 h-6 bg-purple-500 dark:bg-white rounded-full shadow-sm" />
+                     <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-6 bg-cyan-500 dark:bg-white rounded-full shadow-sm" />
+                     <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-1.5 h-6 bg-cyan-500 dark:bg-white rounded-full shadow-sm" />
                 </div>
 
                 {/* Invisible Range Input for Interaction */}
@@ -146,7 +146,7 @@ export function FrameTimeline({
                                 
                                 {/* Selected Indicator Frame */}
                                 {frame.id === seedFrameId && (
-                                    <div className="absolute inset-0 border-2 border-purple-500 dark:border-white z-20 pointer-events-none" />
+                                    <div className="absolute inset-0 border-2 border-cyan-500 dark:border-white z-20 pointer-events-none" />
                                 )}
 
                                 {/* Playhead Indicator */}

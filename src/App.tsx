@@ -13,7 +13,7 @@ export default function App() {
           --card-foreground: 222.2 84% 4.9%;
           --popover: 0 0% 100%;
           --popover-foreground: 222.2 84% 4.9%;
-          --primary: 262.1 83.3% 57.8%; /* Violet-600 */
+          --primary: 188 94% 50%; /* Cyan-500 */
           --primary-foreground: 210 40% 98%;
           --secondary: 210 40% 96.1%;
           --secondary-foreground: 222.2 47.4% 11.2%;
@@ -25,7 +25,7 @@ export default function App() {
           --destructive-foreground: 210 40% 98%;
           --border: 214.3 31.8% 91.4%;
           --input: 214.3 31.8% 91.4%;
-          --ring: 262.1 83.3% 57.8%;
+          --ring: 188 94% 50%;
           --radius: 0.5rem;
         }
 
@@ -37,19 +37,19 @@ export default function App() {
           --card-foreground: 0 0% 98%;
           --popover: 0 0% 6%;
           --popover-foreground: 0 0% 98%;
-          --primary: 263.4 70% 50.4%; /* Violet-700 */
+          --primary: 188 94% 42%; /* Cyan-600 */
           --primary-foreground: 0 0% 100%;
           --secondary: 0 0% 12%;
           --secondary-foreground: 0 0% 98%;
           --muted: 0 0% 12%;
           --muted-foreground: 0 0% 60%;
-          --accent: 75 100% 50%; /* Acid Green */
+          --accent: 188 94% 50%; /* Cyan */
           --accent-foreground: 0 0% 0%;
           --destructive: 0 62.8% 30.6%;
           --destructive-foreground: 0 0% 98%;
           --border: 0 0% 12%;
           --input: 0 0% 12%;
-          --ring: 263.4 70% 50.4%;
+          --ring: 188 94% 42%;
         }
       `}</style>
       <div className="flex-1 flex flex-col">

@@ -41,13 +41,13 @@ export function ControlPanel({
         <div className="space-y-3">
             <div className="flex justify-between items-center text-xs">
                 <span className="text-slate-600 dark:text-white/80 font-medium">Playback Speed</span>
-                <span className="text-purple-600 dark:text-purple-300 font-mono bg-purple-100 dark:bg-purple-500/10 border border-purple-200 dark:border-purple-500/20 px-1.5 py-0.5 rounded text-[10px]">{fps} FPS</span>
+                <span className="text-cyan-600 dark:text-cyan-300 font-mono bg-cyan-100 dark:bg-cyan-500/10 border border-cyan-200 dark:border-cyan-500/20 px-1.5 py-0.5 rounded text-[10px]">{fps} FPS</span>
             </div>
             <div className="relative h-4 flex items-center">
                 <div className="absolute inset-x-0 h-1 bg-slate-200 dark:bg-white/10 rounded-full" />
                 <input 
                   type="range" 
-                  className="w-full h-1 bg-transparent appearance-none cursor-pointer relative z-10 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:bg-purple-500 [&::-webkit-slider-thumb]:dark:bg-purple-400 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-md [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:hover:scale-125" 
+                  className="w-full h-1 bg-transparent appearance-none cursor-pointer relative z-10 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:bg-cyan-500 [&::-webkit-slider-thumb]:dark:bg-cyan-400 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:shadow-md [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:hover:scale-125" 
                   value={fps}
                   onChange={(e) => onFpsChange(Number(e.target.value))}
                   min={1}

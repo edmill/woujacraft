@@ -81,8 +81,8 @@ export function SpriteGrid({ selectedFrames, seedFrameId, onSeedSelect }: Sprite
                             onClick={() => onSeedSelect(frame.id)}
                             className={cn(
                                 "rounded-lg overflow-hidden relative cursor-pointer transition-all duration-150 group border border-transparent",
-                                isSelected 
-                                    ? "ring-2 ring-purple-500 dark:ring-primary ring-offset-2 ring-offset-white dark:ring-offset-black z-10 bg-white dark:bg-white/5 shadow-xl scale-[1.02]" 
+                                isSelected
+                                    ? "ring-2 ring-cyan-500 dark:ring-primary ring-offset-2 ring-offset-white dark:ring-offset-black z-10 bg-white dark:bg-white/5 shadow-xl scale-[1.02]" 
                                     : "hover:bg-slate-100 dark:hover:bg-white/5 hover:border-slate-200 dark:hover:border-white/10"
                             )}
                         >
@@ -102,8 +102,8 @@ export function SpriteGrid({ selectedFrames, seedFrameId, onSeedSelect }: Sprite
                             {/* Index Label */}
                             <div className={cn(
                                 "absolute bottom-1 right-1 text-[8px] font-mono px-1 rounded transition-opacity",
-                                isSelected 
-                                    ? "bg-purple-500 dark:bg-primary text-white opacity-100 font-bold" 
+                                isSelected
+                                    ? "bg-cyan-500 dark:bg-primary text-white opacity-100 font-bold" 
                                     : "bg-white/80 dark:bg-black/60 text-slate-600 dark:text-white/50 opacity-0 group-hover:opacity-100"
                             )}>
                                 {idx + 1}

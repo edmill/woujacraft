@@ -67,9 +67,9 @@ export function DownloadReadyDialog({
               ) : (
                 <div className={cn(
                   "w-16 h-16 rounded-2xl flex items-center justify-center relative z-10",
-                  type === 'png' 
-                    ? "text-indigo-400" 
-                    : "text-pink-400"
+                  type === 'png'
+                    ? "text-cyan-400"
+                    : "text-teal-400"
                 )}>
                   {type === 'png' ? <FileImage className="w-8 h-8" /> : <FileType className="w-8 h-8" />}
                 </div>
@@ -101,7 +101,7 @@ export function DownloadReadyDialog({
                 // Close dialog after a delay
                 setTimeout(onClose, 1000);
               }}
-              className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-purple-600 dark:bg-purple-600 hover:bg-purple-700 dark:hover:bg-purple-500 text-white rounded-xl font-medium transition-all shadow-lg shadow-purple-500/25 active:scale-[0.98]"
+              className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-cyan-600 dark:bg-cyan-600 hover:bg-cyan-700 dark:hover:bg-cyan-500 text-white rounded-xl font-medium transition-all shadow-lg shadow-cyan-500/25 active:scale-[0.98]"
             >
               <Download className="w-4 h-4" />
               Download File

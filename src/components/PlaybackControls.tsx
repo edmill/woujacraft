@@ -61,9 +61,9 @@ export function PlaybackControls({
                 onClick={onTogglePlay}
                 className={cn(
                     "w-12 h-12 flex items-center justify-center rounded-full transition-all shadow-lg hover:scale-105 active:scale-95",
-                    isPlaying 
-                        ? "bg-slate-900 dark:bg-white text-white dark:text-black hover:bg-slate-800 dark:hover:bg-slate-200" 
-                        : "bg-purple-600 text-white hover:bg-purple-500 hover:shadow-purple-500/25"
+                    isPlaying
+                        ? "bg-slate-900 dark:bg-white text-white dark:text-black hover:bg-slate-800 dark:hover:bg-slate-200"
+                        : "bg-cyan-600 text-white hover:bg-cyan-500 hover:shadow-cyan-500/25"
                 )}
                 title={isPlaying ? "Pause" : "Play"}
             >

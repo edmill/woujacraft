@@ -15,7 +15,7 @@ import { FrameData } from './types';
 import { extractFramesFromVideo, extractSpecificFrames } from './utils/videoUtils';
 import { generateSpriteSheet, generateGif, generateWebM, downloadBlob } from './utils/exportUtils';
 import { cn } from './utils/cn';
-import { Camera, Sparkles, ChevronRight, Zap, LayoutGrid, Sliders, Moon, Sun, GripHorizontal } from 'lucide-react';
+import { ChevronRight, Zap, LayoutGrid, Sliders, Moon, Sun, GripHorizontal } from 'lucide-react';
 
 export function Woujacraft() {
   // Theme State
@@ -251,7 +251,7 @@ export function Woujacraft() {
 
   return (
     <div className={cn("h-screen flex flex-col overflow-hidden font-sans transition-colors duration-300", theme === 'dark' ? 'dark' : '')}>
-      <div className="flex-1 flex flex-col h-full bg-slate-50 dark:bg-[#0A0A0A] text-slate-900 dark:text-white selection:bg-purple-500/30">
+      <div className="flex-1 flex flex-col h-full bg-slate-50 dark:bg-[#0A0A0A] text-slate-900 dark:text-white selection:bg-cyan-500/30">
       
       {/* View: Upload State */}
       {!hasContent ? (
@@ -262,16 +262,17 @@ export function Woujacraft() {
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.05)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
                 
                 {/* Ambient Glows */}
-                <div className="absolute top-[-20%] left-[20%] w-[600px] h-[600px] bg-purple-500/10 dark:bg-purple-500/20 rounded-full blur-[120px] mix-blend-screen dark:mix-blend-screen mix-blend-multiply" />
+                <div className="absolute top-[-20%] left-[20%] w-[600px] h-[600px] bg-cyan-500/10 dark:bg-cyan-500/20 rounded-full blur-[120px] mix-blend-screen dark:mix-blend-screen mix-blend-multiply" />
                 <div className="absolute bottom-[-20%] right-[20%] w-[500px] h-[500px] bg-blue-500/10 dark:bg-blue-500/10 rounded-full blur-[120px] mix-blend-screen dark:mix-blend-screen mix-blend-multiply" />
             </div>
 
             <header className="relative z-50 p-8 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-white dark:bg-white/10 rounded-lg flex items-center justify-center border border-slate-200 dark:border-white/10 shadow-sm backdrop-blur-md">
-                        <Camera className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+                    <img src="/logo.png" alt="Woujacraft Logo" className="w-20 h-20 rounded-lg" />
+                    <div className="flex flex-col gap-0.5">
+                        <span className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white/90">Woujacraft</span>
+                        <span className="text-sm font-mono text-slate-400 dark:text-white/50 tracking-wider">FRAME TO SPRITE</span>
                     </div>
-                    <span className="text-lg font-medium tracking-tight text-slate-900 dark:text-white/90">Woujacraft</span>
                 </div>
                 
                 <div className="flex items-center gap-4">
@@ -290,14 +291,9 @@ export function Woujacraft() {
                  
                  {/* Title Section */}
                  <div className="mb-12 space-y-6 relative">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-[10px] font-mono text-purple-600 dark:text-purple-300 mb-2 shadow-sm dark:shadow-[0_0_15px_rgba(168,85,247,0.2)]">
-                        <Sparkles className="w-3 h-3" />
-                        <span>AI-Powered Sprite Extraction</span>
-                    </div>
-                    
                     <h2 className="text-5xl md:text-7xl font-display font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
                         Pixel Perfect <br/>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 dark:from-purple-400 dark:via-pink-300 dark:to-white">Animation</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-teal-500 to-cyan-600 dark:from-cyan-400 dark:via-teal-300 dark:to-white">Animation</span>
                     </h2>
                     
                     <p className="text-slate-500 dark:text-white/50 text-lg md:text-xl max-w-lg mx-auto leading-relaxed font-light">
@@ -307,23 +303,30 @@ export function Woujacraft() {
                  
                  {/* Upload Card */}
                  <div className="w-full relative group">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-purple-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                    <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-teal-500/20 to-cyan-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
                     <UploadZone onFileSelect={handleFileSelect} isProcessing={isProcessing} />
                  </div>
                  
                  {/* Footer Info */}
-                 <div className="mt-12 flex items-center gap-8 text-xs text-slate-400 dark:text-white/20 font-mono">
-                    <div className="flex items-center gap-2">
-                        <LayoutGrid className="w-3 h-3" />
-                        <span>AUTO-GRID</span>
+                 <div className="mt-12 flex flex-col items-center gap-4">
+                    <div className="flex items-center gap-8 text-xs text-slate-400 dark:text-white/20 font-mono">
+                        <div className="flex items-center gap-2">
+                            <LayoutGrid className="w-3 h-3" />
+                            <span>AUTO-GRID</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <Zap className="w-3 h-3" />
+                            <span>BG REMOVAL</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <Sliders className="w-3 h-3" />
+                            <span>FINE TUNING</span>
+                        </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <Zap className="w-3 h-3" />
-                        <span>BG REMOVAL</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <Sliders className="w-3 h-3" />
-                        <span>FINE TUNING</span>
+
+                    {/* Credit */}
+                    <div className="text-[10px] text-slate-300 dark:text-white/10 font-mono">
+                        crafted by: edmiller
                     </div>
                  </div>
               </div>
@@ -333,17 +336,18 @@ export function Woujacraft() {
         /* View: Workspace */
         <div className="flex flex-col h-full">
             {/* Top Bar */}
-            <div className="h-14 border-b border-slate-200 dark:border-white/5 flex items-center justify-between px-4 bg-white/80 dark:bg-[#0A0A0A]/90 backdrop-blur-md shrink-0 z-50">
-                <div className="flex items-center gap-3 cursor-pointer group" onClick={handleReset}>
-                    <div className="w-8 h-8 bg-purple-100 dark:bg-purple-600/20 rounded-lg flex items-center justify-center border border-purple-200 dark:border-purple-500/20 group-hover:bg-purple-200 dark:group-hover:bg-purple-600/30 transition-colors">
-                        <Camera className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+            <div className="h-20 border-b border-slate-200 dark:border-white/5 flex items-center justify-between px-6 bg-white/80 dark:bg-[#0A0A0A]/90 backdrop-blur-md shrink-0 z-50">
+                <div className="flex items-center gap-2.5 cursor-pointer group" onClick={handleReset}>
+                    <img src="/logo.png" alt="Woujacraft Logo" className="w-14 h-14 rounded-lg" />
+                    <div className="hidden sm:flex flex-col gap-0.5">
+                        <span className="font-display font-semibold text-xl text-slate-900 dark:text-white/90">Woujacraft</span>
+                        <span className="text-xs font-mono text-slate-400 dark:text-white/50 tracking-wider">FRAME TO SPRITE</span>
                     </div>
-                    <span className="font-display font-medium text-sm hidden sm:inline text-slate-900 dark:text-white/90">Woujacraft</span>
                 </div>
                 
                 <div className="flex items-center gap-4">
                     <div className="px-3 py-1 bg-slate-100 dark:bg-white/5 rounded-full text-[10px] font-mono text-slate-500 dark:text-white/50 border border-slate-200 dark:border-white/5 flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse" />
                         {frames.length} FRAMES
                     </div>
                     
@@ -368,7 +372,7 @@ export function Woujacraft() {
                 
                 {/* LEFT: Sprite Sheet Grid (Fixed Grid View) */}
                 <div className="lg:w-7/12 xl:w-8/12 p-4 lg:p-6 bg-slate-100 dark:bg-[#050505] flex flex-col h-[50vh] lg:h-full relative overflow-hidden order-2 lg:order-1 border-t lg:border-t-0 lg:border-r border-slate-200 dark:border-white/5">
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-purple-500/5 dark:from-purple-900/10 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-cyan-500/5 dark:from-cyan-900/10 via-transparent to-transparent pointer-events-none" />
                     <SpriteGrid 
                         selectedFrames={selectedFrames}
                         seedFrameId={seedFrameId}
@@ -391,11 +395,11 @@ export function Woujacraft() {
 
                     {/* Horizontal Resize Handle */}
                     <div
-                        className="shrink-0 h-2 bg-slate-200 dark:bg-white/5 hover:bg-purple-500/30 dark:hover:bg-purple-500/30 transition-colors cursor-ns-resize relative group flex items-center justify-center"
+                        className="shrink-0 h-2 bg-slate-200 dark:bg-white/5 hover:bg-cyan-500/30 dark:hover:bg-cyan-500/30 transition-colors cursor-ns-resize relative group flex items-center justify-center"
                         onMouseDown={handleResizeStart}
                     >
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <GripHorizontal className="w-4 h-4 text-slate-400 dark:text-white/40 group-hover:text-purple-500 dark:group-hover:text-purple-400 transition-colors" />
+                            <GripHorizontal className="w-4 h-4 text-slate-400 dark:text-white/40 group-hover:text-cyan-500 dark:group-hover:text-cyan-400 transition-colors" />
                         </div>
                     </div>
 

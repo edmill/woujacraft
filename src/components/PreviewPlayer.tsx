@@ -101,8 +101,8 @@ export function PreviewPlayer({
                 onClick={() => setRemoveBackground(!removeBackground)}
                 className={cn(
                     "h-7 px-2.5 rounded-lg border transition-all flex items-center gap-1.5 text-[10px] font-medium tracking-wide",
-                    removeBackground 
-                        ? "bg-purple-100 dark:bg-purple-500/20 text-purple-600 dark:text-purple-300 border-purple-200 dark:border-purple-500/30 shadow-sm dark:shadow-[0_0_10px_rgba(168,85,247,0.2)]" 
+                    removeBackground
+                        ? "bg-cyan-100 dark:bg-cyan-500/20 text-cyan-600 dark:text-cyan-300 border-cyan-200 dark:border-cyan-500/30 shadow-sm dark:shadow-[0_0_10px_rgba(6,182,212,0.2)]" 
                         : "bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-white/40 border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/10 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/10"
                 )}
                 title="Auto-remove background (Magic Wand)"
