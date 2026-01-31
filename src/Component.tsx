@@ -326,7 +326,7 @@ export function Woujacraft() {
 
                     {/* Credit */}
                     <div className="text-[10px] text-slate-300 dark:text-white/10 font-mono">
-                        crafted by: edmiller
+                        An experiment by: <a href="https://craftedby.ai" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-400 dark:hover:text-white/20 transition-colors">craftedby.ai</a>
                     </div>
                  </div>
               </div>
