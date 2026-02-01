@@ -16,6 +16,10 @@ import { extractFramesFromVideo, extractSpecificFrames } from './utils/videoUtil
 import { generateSpriteSheet, generateGif, generateWebM, downloadBlob } from './utils/exportUtils';
 import { cn } from './utils/cn';
 import { ChevronRight, Zap, LayoutGrid, Sliders, Moon, Sun, GripHorizontal } from 'lucide-react';
+import logoUrl from './assets/logo.png';
+
+// In dev, import is a path; in prod build it's inlined base64. Use root fallback for iframe/dev.
+const logoSrc = import.meta.env.DEV ? '/logo.png' : logoUrl;
 
 export function Woujacraft() {
   // Theme State
@@ -268,7 +272,7 @@ export function Woujacraft() {
 
             <header className="relative z-50 p-8 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                    <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Woujacraft Logo" className="w-20 h-20 rounded-lg" />
+                    <img src={logoSrc} alt="Woujacraft Logo" className="w-20 h-20 rounded-lg" />
                     <div className="flex flex-col gap-0.5">
                         <span className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white/90">Woujacraft</span>
                         <span className="text-sm font-mono text-slate-400 dark:text-white/50 tracking-wider">FRAME TO SPRITE</span>
@@ -338,7 +342,7 @@ export function Woujacraft() {
             {/* Top Bar */}
             <div className="h-20 border-b border-slate-200 dark:border-white/5 flex items-center justify-between px-6 bg-white/80 dark:bg-[#0A0A0A]/90 backdrop-blur-md shrink-0 z-50">
                 <div className="flex items-center gap-2.5 cursor-pointer group" onClick={handleReset}>
-                    <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Woujacraft Logo" className="w-14 h-14 rounded-lg" />
+                    <img src={logoSrc} alt="Woujacraft Logo" className="w-14 h-14 rounded-lg" />
                     <div className="hidden sm:flex flex-col gap-0.5">
                         <span className="font-display font-semibold text-xl text-slate-900 dark:text-white/90">Woujacraft</span>
                         <span className="text-xs font-mono text-slate-400 dark:text-white/50 tracking-wider">FRAME TO SPRITE</span>
