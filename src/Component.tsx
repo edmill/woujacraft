@@ -18,8 +18,9 @@ import { cn } from './utils/cn';
 import { ChevronRight, Zap, LayoutGrid, Sliders, Moon, Sun, GripHorizontal } from 'lucide-react';
 import logoUrl from './assets/logo.png';
 
-// In dev, import is a path; in prod build it's inlined base64. Use root fallback for iframe/dev.
-const logoSrc = import.meta.env.DEV ? '/logo.png' : logoUrl;
+// Always use the imported logo URL to ensure it works in iframes
+// Vite will inline it as base64 in production builds (assetsInlineLimit in vite.config.ts)
+const logoSrc = logoUrl;
 
 export function Woujacraft() {
   // Theme State
